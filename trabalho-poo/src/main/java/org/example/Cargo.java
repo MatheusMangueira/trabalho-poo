@@ -13,7 +13,6 @@ public Cargo(float salarioBase,String CBO,String Nome,String tipoContratacao){
     this.CBO = CBO;
     this.Nome = Nome;
     this.tipoContratacao = tipoContratacao;
-
  } 
  /* Novo construtor sem o tipo de contratação */
  /* Aplicando conceito de sobrecarga */
