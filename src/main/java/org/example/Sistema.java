@@ -6,7 +6,7 @@ public class Sistema {
 
   private ArrayList<FuncPJ> funcPJS = new ArrayList<>();
   private ArrayList<FuncCLT> funcCLTS = new ArrayList<>();
-  private ArrayList<Beneficios> beneficios = new ArrayList<>();
+
 
   public void addFuncCLT(FuncCLT funcCLT) {
     funcCLTS.add(funcCLT);
@@ -16,17 +16,13 @@ public class Sistema {
     funcPJS.add(funcPJ);
   }
 
-  public void addBeneficios(Beneficios beneficios) {
-    this.beneficios.add(beneficios);
-  }
-
   public void removeFuncPJ(String nome) {
     boolean found = false;
     for (int i = 0; i < funcPJS.size(); i++) {
       if (funcPJS.get(i).getNome().equals(nome)) {
         funcPJS.remove(i);
-      } else {
-        System.out.println("Funcionario não encontrado");
+        found = true;
+        break;
       }
     }
     if (!found) {
@@ -66,7 +62,7 @@ public class Sistema {
           " Nome: " + funcPJ.getNome() +
               " CPF: " + funcPJ.getCpf() +
               " Valor Nota: " + funcPJ.getValorNota() +
-              " " + funcPJ.getCargo().toString() +  "\n"
+              " " + funcPJ.getCargo().toString() + "\n"
       );
     }
   }
